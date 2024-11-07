@@ -9,8 +9,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('categories') }}">Categories</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
+                    <ul class="dropdown-menu dropdown-menu-light">
+                    <li><a class="dropdown-item" href="">Interactive multimedia</a></li>
+                    <li><a class="dropdown-item" href="">Software engineering</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('writers') }}">Writers</a>
