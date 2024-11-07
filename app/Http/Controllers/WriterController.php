@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class WriterController extends Controller
 {
-    //
+    public function writer(){
+
+    }
 }

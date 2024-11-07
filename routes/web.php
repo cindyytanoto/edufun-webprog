@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\WriterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
-Route::get('/about', [PageController::class, 'about'])->name('about');
-Route::get('/categories', [PageController::class, 'categories'])->name('categories');
-Route::get('/writers', [PageController::class, 'writers'])->name('writers');
-Route::get('/popular', [PageController::class, 'popular'])->name('popular');
+Route::get('/about', [AboutController::class, 'about'])->name('about');
+Route::get('/categories/interactive-multimedia', [CategoryController::class, 'interactiveMultimedia'])->name('interactive-multimedia');
+Route::get('/categories/software-engineering', [CategoryController::class, 'softwareEngineering'])->name('software-engineering');
+Route::get('/writers', [WriterController::class, 'writers'])->name('writers');
+// Route::get('/popular', [PageController::class, 'popular'])->name('popular');
