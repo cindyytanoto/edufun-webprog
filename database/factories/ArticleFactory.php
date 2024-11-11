@@ -17,7 +17,11 @@ class ArticleFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'writer_id' => $this->faker->numberBetween(1,10),
+            'course_id' => $this->faker->numberBetween(1,6),
+            'article_content' => $this->faker->paragraph(),
+            'article_cover' => $this->faker->imageUrl(),
+            'created_date' => $this->faker->dateTimeThisYear()
         ];
     }
 }

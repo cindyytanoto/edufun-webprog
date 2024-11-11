@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Course;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -13,7 +14,7 @@ class CourseSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('categories')->insert([
+        Course::factory()->createMany([
             [
                 'category_id' => 1,
                 'course_name' => 'Human and Computer Interaction',
